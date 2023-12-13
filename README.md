@@ -8,7 +8,7 @@
 `pip install -r requirements.txt`
 2. 提供个人账号的x-csrf-token和Cookie并写到headers.txt中。
 注意hearders.txt中数据的格式为
-[key]: [value]
+[key]: [value] ,
 使用": "作为分隔符
 3. 运行脚本
 ```
