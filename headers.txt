@@ -1,0 +1,11 @@
+Accept: application/json
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36
+Content-Type: application/json
+Origin: https://www.yuque.com
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://www.yuque.com
+x-csrf-token: [你的x-csrf-token]
+Cookie: [你的Cookie]
