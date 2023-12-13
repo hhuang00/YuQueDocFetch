@@ -1,5 +1,5 @@
 # YuQueDocFetch
-![image](https://github.com/hhuang00/YuQueDocFetch/assets/108319401/141f087c-db64-4112-9141-6d1561f319c8)
+![image](https://github.com/hhuang00/YuQueDocFetch/assets/108319401/fa28369c-1b51-4429-85d2-df48f6aeb29c)
 
 本脚本使用python3编写
 用于批量获取语雀下的个人知识库文档，并且按照原本的目录结构保存到本地，格式为docx。
