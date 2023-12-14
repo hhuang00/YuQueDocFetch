@@ -6,6 +6,7 @@ import os
 from tqdm import tqdm
 import re
 import urllib.parse
+from termcolor import colored
 
 # 读取请求头信息文件
 from sympy.physics.units import time
@@ -157,12 +158,13 @@ def download_file(url, title, path):
     file_path = os.path.join(path, f"{cleaned_title}.docx")
     if os.path.exists(file_path):
         print(f"File {file_path} already exists. Overwriting...")
+    else:
+        print(f"File {file_path}:")
     response = requests.get(url, stream=True)
     if response.status_code == 200:
         total_size = int(response.headers.get('content-length', 0))
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(file_path, 'wb') as file, tqdm(
-                desc=file_path,
                 total=total_size,
                 unit='B',
                 unit_scale=True,
@@ -174,14 +176,15 @@ def download_file(url, title, path):
             for data in response.iter_content(chunk_size=4096):
                 file.write(data)
                 progress_bar.update(len(data))
-        print(f"下载成功^^")
+        #print(f"下载成功^^")
     else:
         print("下载失败QAQ")
 
 
 def generate_banner(script_name):
     ascii_banner = pyfiglet.figlet_format(script_name)
-    print(ascii_banner + "v2.0")
+    colored_banner = colored(ascii_banner, color='green')
+    print(colored_banner + "v2.0")
     print("欢迎使用YuQueDocFetch~")
     print("INFO:")
     print("  -p 指定文档下载路径(默认./output/)，示例：python YuQueDocFetch.py -p ./output/ \n")
